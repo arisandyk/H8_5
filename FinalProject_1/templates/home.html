@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>Kelompok 2 - Linear Regression</title>
+  </head>
+  <body>
+    <div class="div2">
+      <form action="{{ url_for('predict') }}" method="POST">
+        <label>Choose your distance:</label>
+        <input type="text" name="distance" min="1" max="10" id="distance" />
+        <br />
+        <br />
+        <label>Choose your surge_multiplier:</label>
+        <input type="text" name="surge_multiplier" min="0" max="1" id="surge_multiplier" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your cab_type_lyft:</label>
+        <input type="text" name="cab_type_lyft" min="0" max="1" id="cab_type_lyft" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your cab_type_uber:</label>
+        <input type="text" name="cab_type_uber" min="0" max="1" id="cab_type_uber" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your name_black:</label>
+        <input type="text" name="name_black" min="0" max="1" id="name_black" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your name_blackSUV:</label>
+        <input type="text" name="name_blackSUV" min="0" max="1" id="name_blackSUV" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your name_Lux:</label>
+        <input type="text" name="name_lux" min="0" max="1" id="name_lux" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your name_LuxBlack:</label>
+        <input type="text" name="name_luxblack" min="0" max="1" id="name_luxblack" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your name_LuxBlackXL:</label>
+        <input type="text" name="name_luxblackxl" min="0" max="1" id="name_luxblackxl" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your name_Lyft:</label>
+        <input type="text" name="name_lyft" min="0" max="1" id="name_lyft" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your name_LyftXL:</label>
+        <input type="text" name="name_lyftxl" min="0" max="1" id="name_lyftxl" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your name_Shared:</label>
+        <input type="text" name="name_shared" min="0" max="1" id="name_shared" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your name_Taxi:</label>
+        <input type="text" name="name_taxi" min="0" max="1" id="name_taxi" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your name_UberPool:</label>
+        <input type="text" name="name_uberpool" min="0" max="1" id="name_uberpool" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your name_UberX:</label>
+        <input type="text" name="name_uberx" min="0" max="1" id="name_uberx" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your name_UberXL:</label>
+        <input type="text" name="name_uberxl" min="0" max="1" id="name_uberxl" value="0.0" />
+        <br />
+        <br />
+        <label>Choose your name_WAV:</label>
+        <input type="text" name="name_wav" min="0" max="1" id="name_wav" value="0.0" />
+        <br />
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+      <br />
+      <p>Prediction you must paid: ${{prediction_value}}</p>
+    </div>
+  </body>
+</html>
